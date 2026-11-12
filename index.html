@@ -3,69 +3,141 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#f6f5f0">
-  <meta name="description" content="Compact training gear for focused workouts—at home, at the gym, or on the move. Train smarter, anywhere with Gridcrest.">
-  <title>Gridcrest — Train smarter. Anywhere.</title>
+  <meta name="theme-color" content="#071321">
+  <meta name="description" content="Gridcrest develops resilient power infrastructure for the AI era, connecting dedicated solar generation, storage and energy solutions to high-performance computing.">
+  <title>Gridcrest — Powering the AI Era</title>
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
-  <script src="script.js" defer></script>
 </head>
 <body>
-  <div class="announcement">A little more room to move. <strong>Free U.S. shipping on orders over $50.</strong> <a href="#shop">Shop now <span aria-hidden="true">↗</span></a></div>
+  <div class="announcement"><span class="pulse"></span><span data-i18n="announce">Energy infrastructure for the next generation of computing</span></div>
   <header class="site-header">
-    <a class="wordmark" href="#home" aria-label="Gridcrest home"><span class="brand-mark" aria-hidden="true">G</span>GRIDCREST<span class="wordmark-period">.</span></a>
+    <a class="brand" href="#home" aria-label="Gridcrest home">
+      <img src="assets/brand-mark.svg" alt="" class="brand-mark">
+      <span>GRIDCREST</span>
+    </a>
     <button class="menu-toggle" aria-label="Open navigation" aria-expanded="false"><span></span><span></span></button>
-    <nav class="main-nav" aria-label="Main navigation">
-      <a href="#home">Home</a><a href="#shop">Catalog</a><a href="#story">Our approach</a><a href="#contact">Contact</a>
+    <nav class="nav">
+      <a href="#platform" data-i18n="navPlatform">Platform</a>
+      <a href="#solutions" data-i18n="navSolutions">Solutions</a>
+      <a href="#approach" data-i18n="navApproach">Our approach</a>
+      <a href="#about" data-i18n="navAbout">About</a>
+      <a href="#contact" class="nav-cta" data-i18n="navContact">Contact us <span>↗</span></a>
+      <button class="lang-switch" id="langSwitch" aria-label="Switch language">中文</button>
     </nav>
-    <div class="header-actions"><a class="account-link" href="#contact">Account</a><button class="cart-button" aria-label="Shopping bag, 0 items">Bag <span class="cart-count">0</span><span aria-hidden="true">↗</span></button></div>
   </header>
+
   <main>
     <section class="hero" id="home">
-      <div class="hero-image" role="img" aria-label="A quiet, sunlit space ready for a focused workout"></div>
-      <div class="hero-shade"></div>
+      <div class="hero-grid"></div>
       <div class="hero-content">
-        <p class="eyebrow light-eyebrow"><span></span> GOOD GEAR. NO EXCUSES.</p>
-        <h1>Train smarter.<br><em>Anywhere.</em></h1>
-        <p class="hero-copy">Compact gear for focused workouts—at home, at the gym, or on the move.</p>
-        <a class="button button-light" href="#shop">Shop training gear <span aria-hidden="true">↗</span></a>
-        <div class="hero-note"><span class="note-star">✳</span> Made for the work you put in.</div>
+        <div class="eyebrow"><span class="eyebrow-line"></span><span data-i18n="heroEyebrow">POWERING THE AI ERA</span></div>
+        <h1 data-i18n="heroTitle">The future runs<br><em>on better energy.</em></h1>
+        <p class="hero-copy" data-i18n="heroCopy">Gridcrest develops next-generation power infrastructure for AI and high-performance computing — bringing together dedicated renewable generation, energy storage and resilient power solutions.</p>
+        <div class="hero-actions">
+          <a class="button button-primary" href="#platform"><span data-i18n="explore">Explore our platform</span><b>↗</b></a>
+          <a class="text-link" href="#contact"><span data-i18n="talk">Talk to our team</span><span>→</span></a>
+        </div>
+        <div class="hero-footnote"><span class="mini-mark">G</span><span data-i18n="heroNote">POWER • COMPUTE • POSSIBILITY</span></div>
       </div>
-      <div class="hero-index"><span>01</span> / 03</div>
-      <a class="scroll-cue" href="#intro">SCROLL TO EXPLORE <span aria-hidden="true">↓</span></a>
+      <div class="hero-art" aria-label="Abstract solar and data infrastructure illustration">
+        <div class="orb orb-one"></div><div class="orb orb-two"></div>
+        <div class="sun-core"></div>
+        <div class="solar-field">
+          <div class="panel panel-a"></div><div class="panel panel-b"></div><div class="panel panel-c"></div>
+          <div class="panel panel-d"></div><div class="panel panel-e"></div><div class="panel panel-f"></div>
+        </div>
+        <div class="data-tower tower-one"><i></i><i></i><i></i><i></i></div>
+        <div class="data-tower tower-two"><i></i><i></i><i></i><i></i></div>
+        <div class="energy-path path-one"></div><div class="energy-path path-two"></div>
+        <div class="art-label label-top"><span class="label-dot"></span><span data-i18n="artLabel1">RENEWABLE GENERATION</span></div>
+        <div class="art-label label-bottom"><span class="label-dot"></span><span data-i18n="artLabel2">COMPUTE-READY POWER</span></div>
+      </div>
+      <div class="hero-bottom"><span>01 / 04</span><div class="hero-progress"><i></i></div><span data-i18n="scroll">SCROLL TO DISCOVER</span></div>
     </section>
 
-    <section class="intro section-pad" id="intro">
-      <p class="eyebrow"><span></span> YOUR ROUTINE, YOUR RULES</p>
-      <div class="intro-row"><h2>Make room<br>for <em>better.</em></h2><div class="intro-aside"><p>Small, considered essentials to help you keep showing up. No complicated setup. Just useful gear that fits the way you train.</p><a class="text-link" href="#story">Why Gridcrest <span aria-hidden="true">↗</span></a></div></div>
-      <div class="feature-strip"><div><span class="feature-icon">01</span><p><strong>Focus on the work</strong><br>Tools that keep your routine simple.</p></div><div><span class="feature-icon">02</span><p><strong>Built for real life</strong><br>Easy to use at home or on the go.</p></div><div><span class="feature-icon">03</span><p><strong>More to keep moving</strong><br>Free U.S. shipping over $50.</p></div></div>
-    </section>
+    <section class="ticker" aria-label="Gridcrest focus areas"><div class="ticker-track">
+      <span>RENEWABLE ENERGY <b>✳</b></span><span>AI INFRASTRUCTURE <b>✳</b></span><span>ENERGY STORAGE <b>✳</b></span><span>POWER RESILIENCE <b>✳</b></span><span>RENEWABLE ENERGY <b>✳</b></span><span>AI INFRASTRUCTURE <b>✳</b></span>
+    </div></section>
 
-    <section class="quiet-callout" aria-label="Quiet basketball training">
-      <div class="quiet-image" role="img" aria-label="Basketball on an indoor court"></div>
-      <div class="quiet-copy"><p class="eyebrow light-eyebrow"><span></span> YOUR GAME, ON YOUR TIME</p><h2>Build your<br><em>game.</em></h2><p>A quieter way to fit ball-handling drills into your routine at home. Put in the reps, without making a scene.</p><a class="button button-outline" href="#shop">Shop quiet basketball <span aria-hidden="true">↗</span></a></div>
-      <span class="quiet-label">THE DAILY PRACTICE — VOL. 01</span>
-    </section>
-
-    <section class="shop section-pad" id="shop">
-      <div class="section-heading"><div><p class="eyebrow"><span></span> THE EVERYDAY LINEUP</p><h2>Good things<br>for <em>your grind.</em></h2></div><a class="text-link shop-all" href="#shop">Shop all gear <span aria-hidden="true">↗</span></a></div>
-      <div class="product-grid">
-        <article class="product-card"><a class="product-image image-bottle" href="#contact" aria-label="Learn about magnetic gym bottle bag"><span class="product-tag">BEST SELLER</span><span class="product-visual bottle-visual"><span class="bottle-cap"></span><span class="bottle-logo">GC</span></span><span class="quick-view">View product <span aria-hidden="true">↗</span></span></a><div class="product-info"><div><h3>Magnetic Gym Bottle Bag</h3><p>Hands-free workout gear holder</p></div><span class="price">$31.22</span></div><button class="add-button" data-product="Magnetic Gym Bottle Bag" data-price="31.22">Add to bag <span aria-hidden="true">+</span></button></article>
-        <article class="product-card"><a class="product-image image-phone" href="#contact" aria-label="Learn about magnetic gym phone holder"><span class="product-visual phone-visual"><span class="phone-screen"></span><span class="phone-ring"></span></span><span class="quick-view">View product <span aria-hidden="true">↗</span></span></a><div class="product-info"><div><h3>Magnetic Gym Phone Holder</h3><p>Hands-free workout phone mount</p></div><span class="price">$12.67</span></div><button class="add-button" data-product="Magnetic Gym Phone Holder" data-price="12.67">Add to bag <span aria-hidden="true">+</span></button></article>
-        <article class="product-card"><a class="product-image image-grip" href="#contact" aria-label="Learn about adjustable grip strength trainer"><span class="product-tag">5-PIECE SET</span><span class="product-visual grip-visual"><span class="grip-handle"></span><span class="grip-band"></span><span class="grip-ball"></span></span><span class="quick-view">View product <span aria-hidden="true">↗</span></a><div class="product-info"><div><h3>Adjustable Grip Strength Kit</h3><p>Five-piece training set</p></div><span class="price">$18.85</span></div><button class="add-button" data-product="Adjustable Grip Strength Kit" data-price="18.85">Add to bag <span aria-hidden="true">+</span></button></article>
-        <article class="product-card"><a class="product-image image-pad" href="#contact" aria-label="Learn about barbell squat and hip thrust pad set"><span class="product-visual pad-visual"><span class="pad-bar"></span><span class="pad-piece"></span></span><span class="quick-view">View product <span aria-hidden="true">↗</span></a><div class="product-info"><div><h3>Squat &amp; Hip Thrust Pad Set</h3><p>Comfort for your heavy days</p></div><span class="price">$21.33</span></div><button class="add-button" data-product="Squat & Hip Thrust Pad Set" data-price="21.33">Add to bag <span aria-hidden="true">+</span></button></article>
+    <section class="section intro-section" id="about">
+      <div class="section-kicker"><span>01</span><span data-i18n="introKicker">WHO WE ARE</span></div>
+      <div class="intro-layout">
+        <h2 data-i18n="introTitle">Building the energy foundation for <em>what’s next.</em></h2>
+        <div class="intro-text"><p data-i18n="introCopy">As demand for AI computing accelerates, access to reliable, scalable power is becoming a defining infrastructure challenge. Gridcrest is focused on developing energy assets and integrated solutions designed around the needs of tomorrow’s digital economy.</p><a class="under-link" href="#approach"><span data-i18n="learn">Learn about our approach</span><b>↗</b></a></div>
+      </div>
+      <div class="stats-row">
+        <div class="stat"><strong>24/7</strong><span data-i18n="stat1">Power availability as a design priority</span></div>
+        <div class="stat"><strong>MW+</strong><span data-i18n="stat2">Scalable infrastructure development</span></div>
+        <div class="stat"><strong>AI</strong><span data-i18n="stat3">Energy strategies built for compute</span></div>
+        <div class="stat stat-note"><span data-i18n="statNote">A development-led platform connecting energy resources with evolving power demand.</span></div>
       </div>
     </section>
 
-    <section class="story" id="story"><div class="story-photo" role="img" aria-label="Athlete preparing for a strength workout"></div><div class="story-content"><p class="eyebrow light-eyebrow"><span></span> WHY GRIDCREST</p><h2>Training gear<br>that gets <em>it.</em></h2><p class="story-copy">The best routine is the one you can stick with. We find simple, versatile tools that make everyday practice feel a little easier—wherever you find the time.</p><ul class="story-list"><li><span>01</span> Focused tools for everyday training</li><li><span>02</span> Simple, useful, ready when you are</li><li><span>03</span> Gear that moves with your routine</li></ul><a class="button button-outline" href="#shop">Find your next essential <span aria-hidden="true">↗</span></a></div></section>
+    <section class="platform-section" id="platform">
+      <div class="section platform-inner">
+        <div class="section-kicker light"><span>02</span><span data-i18n="platformKicker">THE GRIDCREST PLATFORM</span></div>
+        <div class="platform-heading"><h2 data-i18n="platformTitle">One platform.<br><em>Multiple power pathways.</em></h2><p data-i18n="platformCopy">We bring key parts of the energy value chain into one coordinated development vision — from generation and storage to delivery and long-term operations.</p></div>
+        <div class="capability-grid">
+          <article class="cap-card"><div class="cap-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="8"/><path d="M24 3v8M24 37v8M3 24h8M37 24h8M9 9l6 6m18 18 6 6M39 9l-6 6M15 33l-6 6"/></svg></div><span class="cap-num">01</span><h3 data-i18n="cap1">Dedicated solar generation</h3><p data-i18n="cap1p">Utility-scale solar resources designed to support energy-intensive infrastructure.</p></article>
+          <article class="cap-card"><div class="cap-icon"><svg viewBox="0 0 48 48"><rect x="9" y="12" width="30" height="28" rx="3"/><path d="M19 7v5m10-5v5M19 26h10m-5-5v10"/></svg></div><span class="cap-num">02</span><h3 data-i18n="cap2">Energy storage</h3><p data-i18n="cap2p">Flexible storage architecture to help balance generation, demand and reliability.</p></article>
+          <article class="cap-card"><div class="cap-icon"><svg viewBox="0 0 48 48"><path d="M7 39V9h34v30M14 16h20M14 23h20M14 30h20M3 39h42"/></svg></div><span class="cap-num">03</span><h3 data-i18n="cap3">Compute-ready infrastructure</h3><p data-i18n="cap3p">Power planning aligned with the operating requirements of data centers and AI workloads.</p></article>
+          <article class="cap-card"><div class="cap-icon"><svg viewBox="0 0 48 48"><path d="M24 4 41 13v22l-17 9L7 35V13z"/><path d="m7 13 17 10 17-10M24 23v21"/></svg></div><span class="cap-num">04</span><h3 data-i18n="cap4">Hybrid energy systems</h3><p data-i18n="cap4p">Integrated solar, storage, grid and backup concepts tailored to site conditions.</p></article>
+          <article class="cap-card"><div class="cap-icon"><svg viewBox="0 0 48 48"><path d="M6 37h36M11 31l9-10 7 6 11-15"/><path d="M30 12h8v8"/></svg></div><span class="cap-num">05</span><h3 data-i18n="cap5">Power procurement</h3><p data-i18n="cap5p">Commercial frameworks, including long-term power purchase arrangements where applicable.</p></article>
+          <article class="cap-card"><div class="cap-icon"><svg viewBox="0 0 48 48"><circle cx="24" cy="24" r="17"/><path d="M24 7v34M7 24h34M12 12l24 24m0-24L12 36"/></svg></div><span class="cap-num">06</span><h3 data-i18n="cap6">Project development</h3><p data-i18n="cap6p">A coordinated approach to site strategy, partners, permitting, delivery and operations.</p></article>
+        </div>
+      </div>
+    </section>
 
-    <section class="testimonial section-pad"><p class="eyebrow"><span></span> WORD ON THE WORKOUT</p><div class="quote-mark">“</div><blockquote>“Simple gear that makes it easier to get a good session in, wherever I am.”</blockquote><div class="quote-credit"><span class="quote-line"></span><span>GRIDCREST COMMUNITY</span><span class="quote-stars" aria-label="5 out of 5 stars">★★★★★</span></div><div class="quote-dots"><span class="active"></span><span></span><span></span></div></section>
+    <section class="section solutions-section" id="solutions">
+      <div class="section-kicker"><span>03</span><span data-i18n="solutionsKicker">WHERE ENERGY MEETS COMPUTE</span></div>
+      <div class="solutions-head"><h2 data-i18n="solutionsTitle">Infrastructure built around <em>real-world demand.</em></h2><p data-i18n="solutionsCopy">From energy production to digital infrastructure, Gridcrest focuses on the connections that make projects viable and resilient.</p></div>
+      <div class="solution-cards">
+        <article class="solution-card solar-card"><div class="solution-image solar-visual"><div class="visual-sun"></div><div class="solar-horizon"></div><div class="solar-lines"></div></div><div class="solution-info"><span class="small-label" data-i18n="solutionTag1">ENERGY SUPPLY</span><h3 data-i18n="solution1">Utility-scale renewables</h3><p data-i18n="solution1p">Developing solar-led generation assets with a focus on resource quality, project fundamentals and long-term value.</p><a href="#contact" class="arrow-link" aria-label="Contact about utility-scale renewables">↗</a></div></article>
+        <article class="solution-card compute-card"><div class="solution-image compute-visual"><div class="server-stack"><i></i><i></i><i></i><i></i></div><div class="compute-glow"></div><div class="circuit circuit-a"></div><div class="circuit circuit-b"></div></div><div class="solution-info"><span class="small-label" data-i18n="solutionTag2">DIGITAL INFRASTRUCTURE</span><h3 data-i18n="solution2">AI & data center power</h3><p data-i18n="solution2p">Supporting the power needs of high-density computing through thoughtful energy and infrastructure planning.</p><a href="#contact" class="arrow-link" aria-label="Contact about AI and data center power">↗</a></div></article>
+        <article class="solution-card storage-card"><div class="solution-image storage-visual"><div class="battery battery-a"></div><div class="battery battery-b"></div><div class="battery battery-c"></div><div class="storage-wave"></div></div><div class="solution-info"><span class="small-label" data-i18n="solutionTag3">SYSTEM FLEXIBILITY</span><h3 data-i18n="solution3">Storage & hybrid systems</h3><p data-i18n="solution3p">Combining complementary resources to improve system flexibility and support project-specific requirements.</p><a href="#contact" class="arrow-link" aria-label="Contact about storage and hybrid systems">↗</a></div></article>
+      </div>
+    </section>
 
-    <section class="closing-cta"><div><p class="eyebrow light-eyebrow"><span></span> YOUR NEXT REP STARTS HERE</p><h2>Show up.<br><em>Anywhere.</em></h2></div><div class="closing-side"><p>Find the little things that make your routine work harder for you.</p><a class="button button-light" href="#shop">Shop training gear <span aria-hidden="true">↗</span></a><span class="shipping-note">Free U.S. shipping on orders over $50</span></div><span class="closing-spark" aria-hidden="true">✳</span></section>
+    <section class="approach-section" id="approach">
+      <div class="section approach-inner">
+        <div class="section-kicker light"><span>04</span><span data-i18n="approachKicker">FROM VISION TO OPERATIONS</span></div>
+        <div class="approach-top"><h2 data-i18n="approachTitle">A disciplined path<br>from <em>project to power.</em></h2><p data-i18n="approachCopy">Strong infrastructure starts with rigorous development. We focus on the critical workstreams that move projects from concept toward execution.</p></div>
+        <div class="steps">
+          <div class="step"><span>01</span><div><h3 data-i18n="step1">Site & resource strategy</h3><p data-i18n="step1p">Assess land, solar and wind resources, infrastructure access and local conditions.</p></div><b>↗</b></div>
+          <div class="step"><span>02</span><div><h3 data-i18n="step2">Technical & commercial design</h3><p data-i18n="step2p">Shape the generation mix, storage configuration, demand profile and commercial model.</p></div><b>↗</b></div>
+          <div class="step"><span>03</span><div><h3 data-i18n="step3">Permitting & partnerships</h3><p data-i18n="step3p">Coordinate local stakeholders, technical partners, approvals and project agreements.</p></div><b>↗</b></div>
+          <div class="step"><span>04</span><div><h3 data-i18n="step4">Delivery & long-term operations</h3><p data-i18n="step4p">Advance execution, commissioning and operating strategies with qualified partners.</p></div><b>↗</b></div>
+        </div>
+        <p class="approach-foot" data-i18n="approachFoot">Each project is evaluated on its own technical, regulatory, commercial and environmental merits.</p>
+      </div>
+    </section>
+
+    <section class="section principles-section">
+      <div class="section-kicker"><span>05</span><span data-i18n="principlesKicker">OUR PRINCIPLES</span></div>
+      <div class="principles-layout"><h2 data-i18n="principlesTitle">Built on clarity.<br><em>Designed for endurance.</em></h2>
+        <div class="principle-list">
+          <div><span>01</span><h3 data-i18n="principle1">Infrastructure first</h3><p data-i18n="principle1p">Ground decisions in the realities of power systems, sites and end-user requirements.</p></div>
+          <div><span>02</span><h3 data-i18n="principle2">Partnership driven</h3><p data-i18n="principle2p">Work with experienced local and international partners across the project lifecycle.</p></div>
+          <div><span>03</span><h3 data-i18n="principle3">Long-term perspective</h3><p data-i18n="principle3p">Prioritize durable project fundamentals, responsible development and operational resilience.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-orbit orbit-a"></div><div class="contact-orbit orbit-b"></div>
+      <div class="section contact-inner">
+        <div class="section-kicker light"><span>06</span><span data-i18n="contactKicker">LET’S BUILD WHAT’S NEXT</span></div>
+        <div class="contact-content"><h2 data-i18n="contactTitle">Power the next<br><em>possibility.</em></h2><p data-i18n="contactCopy">Have a project, partnership or investment inquiry? Connect with the Gridcrest team.</p><a class="button button-light" href="mailto:info@gridcrest.us"><span data-i18n="contactButton">Start a conversation</span><b>↗</b></a></div>
+        <div class="contact-meta"><div><span data-i18n="emailLabel">GENERAL INQUIRIES</span><a href="mailto:info@gridcrest.us">info@gridcrest.us</a></div><div><span data-i18n="companyLabel">COMPANY</span><strong>Gridcrest, Inc.</strong></div><div><span data-i18n="locationLabel">FOCUS</span><strong data-i18n="locationValue">Energy • AI • Infrastructure</strong></div></div>
+      </div>
+    </section>
   </main>
-  <footer class="site-footer" id="contact"><div class="footer-top"><div class="footer-brand"><a class="wordmark" href="#home"><span class="brand-mark" aria-hidden="true">G</span>GRIDCREST<span class="wordmark-period">.</span></a><p>Good gear for showing up.</p></div><div class="footer-links"><div><span class="footer-label">EXPLORE</span><a href="#shop">Catalog</a><a href="#story">Our approach</a><a href="#home">Home</a></div><div><span class="footer-label">WE'RE HERE</span><a href="mailto:hello@gridcrest.us">Contact us</a><a href="mailto:hello@gridcrest.us">hello@gridcrest.us</a><a href="#contact">Shipping &amp; returns</a></div><form class="newsletter"><label class="footer-label" for="email">GOOD NOTES, OCCASIONALLY.</label><p>Product news and ideas for your next session.</p><div class="email-field"><input id="email" type="email" placeholder="Your email address" required><button aria-label="Subscribe to newsletter" type="submit">↗</button></div><span class="form-message" aria-live="polite"></span></form></div></div><div class="footer-bottom"><span>© <span id="year"></span> Gridcrest. All rights reserved.</span><span>TRAIN WELL. TAKE IT WITH YOU.</span><a href="#home">Back to top ↑</a></div></footer>
-  <div class="toast" role="status" aria-live="polite"></div>
+
+  <footer class="footer"><a class="brand footer-brand" href="#home"><img src="assets/brand-mark.svg" alt=""><span>GRIDCREST</span></a><p data-i18n="footerLine">Power infrastructure for the AI era.</p><div class="footer-bottom"><span>© <span id="year"></span> Gridcrest, Inc. <span data-i18n="rights">All rights reserved.</span></span><span data-i18n="disclaimer">Information on this website is for general informational purposes only and does not constitute an offer to sell or a solicitation to buy securities.</span><a href="#home" class="back-top" data-i18n="backTop">BACK TO TOP ↑</a></div></footer>
+  <script src="script.js"></script>
 </body>
 </html>

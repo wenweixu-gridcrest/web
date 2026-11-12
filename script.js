@@ -1,49 +1,17 @@
-const menuToggle = document.querySelector('.menu-toggle');
-const mainNav = document.querySelector('.main-nav');
-const cartCount = document.querySelector('.cart-count');
-const cartButton = document.querySelector('.cart-button');
-const toast = document.querySelector('.toast');
-let count = 0;
-let toastTimer;
-
-document.querySelector('#year').textContent = new Date().getFullYear();
-
-menuToggle.addEventListener('click', () => {
-  const isOpen = mainNav.classList.toggle('open');
-  menuToggle.setAttribute('aria-expanded', String(isOpen));
-  menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation' : 'Open navigation');
-});
-
-mainNav.querySelectorAll('a').forEach((link) => {
-  link.addEventListener('click', () => {
-    mainNav.classList.remove('open');
-    menuToggle.setAttribute('aria-expanded', 'false');
-  });
-});
-
-document.querySelectorAll('.add-button').forEach((button) => {
-  button.addEventListener('click', () => {
-    count += 1;
-    cartCount.textContent = count;
-    cartButton.setAttribute('aria-label', `Shopping bag, ${count} ${count === 1 ? 'item' : 'items'}`);
-    showToast(`${button.dataset.product} added to your bag`);
-  });
-});
-
-cartButton.addEventListener('click', () => {
-  showToast(count ? `Your bag has ${count} ${count === 1 ? 'item' : 'items'}.` : 'Your bag is ready for something good.');
-});
-
-document.querySelector('.newsletter').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  form.querySelector('.form-message').textContent = 'Thanks for joining us. Watch your inbox!';
-  form.reset();
-});
-
-function showToast(message) {
-  toast.textContent = message;
-  toast.classList.add('visible');
-  clearTimeout(toastTimer);
-  toastTimer = setTimeout(() => toast.classList.remove('visible'), 2600);
-}
+const copy = {
+en:{
+announce:"Energy infrastructure for the next generation of computing",navPlatform:"Platform",navSolutions:"Solutions",navApproach:"Our approach",navAbout:"About",navContact:"Contact us",heroEyebrow:"POWERING THE AI ERA",heroTitle:"The future runs<br><em>on better energy.</em>",heroCopy:"Gridcrest develops next-generation power infrastructure for AI and high-performance computing — bringing together dedicated renewable generation, energy storage and resilient power solutions.",explore:"Explore our platform",talk:"Talk to our team",heroNote:"POWER • COMPUTE • POSSIBILITY",artLabel1:"RENEWABLE GENERATION",artLabel2:"COMPUTE-READY POWER",scroll:"SCROLL TO DISCOVER",introKicker:"WHO WE ARE",introTitle:"Building the energy foundation for <em>what’s next.</em>",introCopy:"As demand for AI computing accelerates, access to reliable, scalable power is becoming a defining infrastructure challenge. Gridcrest is focused on developing energy assets and integrated solutions designed around the needs of tomorrow’s digital economy.",learn:"Learn about our approach",stat1:"Power availability as a design priority",stat2:"Scalable infrastructure development",stat3:"Energy strategies built for compute",statNote:"A development-led platform connecting energy resources with evolving power demand.",platformKicker:"THE GRIDCREST PLATFORM",platformTitle:"One platform.<br><em>Multiple power pathways.</em>",platformCopy:"We bring key parts of the energy value chain into one coordinated development vision — from generation and storage to delivery and long-term operations.",cap1:"Dedicated solar generation",cap1p:"Utility-scale solar resources designed to support energy-intensive infrastructure.",cap2:"Energy storage",cap2p:"Flexible storage architecture to help balance generation, demand and reliability.",cap3:"Compute-ready infrastructure",cap3p:"Power planning aligned with the operating requirements of data centers and AI workloads.",cap4:"Hybrid energy systems",cap4p:"Integrated solar, storage, grid and backup concepts tailored to site conditions.",cap5:"Power procurement",cap5p:"Commercial frameworks, including long-term power purchase arrangements where applicable.",cap6:"Project development",cap6p:"A coordinated approach to site strategy, partners, permitting, delivery and operations.",solutionsKicker:"WHERE ENERGY MEETS COMPUTE",solutionsTitle:"Infrastructure built around <em>real-world demand.</em>",solutionsCopy:"From energy production to digital infrastructure, Gridcrest focuses on the connections that make projects viable and resilient.",solutionTag1:"ENERGY SUPPLY",solution1:"Utility-scale renewables",solution1p:"Developing solar-led generation assets with a focus on resource quality, project fundamentals and long-term value.",solutionTag2:"DIGITAL INFRASTRUCTURE",solution2:"AI & data center power",solution2p:"Supporting the power needs of high-density computing through thoughtful energy and infrastructure planning.",solutionTag3:"SYSTEM FLEXIBILITY",solution3:"Storage & hybrid systems",solution3p:"Combining complementary resources to improve system flexibility and support project-specific requirements.",approachKicker:"FROM VISION TO OPERATIONS",approachTitle:"A disciplined path<br>from <em>project to power.</em>",approachCopy:"Strong infrastructure starts with rigorous development. We focus on the critical workstreams that move projects from concept toward execution.",step1:"Site & resource strategy",step1p:"Assess land, solar and wind resources, infrastructure access and local conditions.",step2:"Technical & commercial design",step2p:"Shape the generation mix, storage configuration, demand profile and commercial model.",step3:"Permitting & partnerships",step3p:"Coordinate local stakeholders, technical partners, approvals and project agreements.",step4:"Delivery & long-term operations",step4p:"Advance execution, commissioning and operating strategies with qualified partners.",approachFoot:"Each project is evaluated on its own technical, regulatory, commercial and environmental merits.",principlesKicker:"OUR PRINCIPLES",principlesTitle:"Built on clarity.<br><em>Designed for endurance.</em>",principle1:"Infrastructure first",principle1p:"Ground decisions in the realities of power systems, sites and end-user requirements.",principle2:"Partnership driven",principle2p:"Work with experienced local and international partners across the project lifecycle.",principle3:"Long-term perspective",principle3p:"Prioritize durable project fundamentals, responsible development and operational resilience.",contactKicker:"LET’S BUILD WHAT’S NEXT",contactTitle:"Power the next<br><em>possibility.</em>",contactCopy:"Have a project, partnership or investment inquiry? Connect with the Gridcrest team.",contactButton:"Start a conversation",emailLabel:"GENERAL INQUIRIES",companyLabel:"COMPANY",locationLabel:"FOCUS",locationValue:"Energy • AI • Infrastructure",footerLine:"Power infrastructure for the AI era.",rights:"All rights reserved.",disclaimer:"Information on this website is for general informational purposes only and does not constitute an offer to sell or a solicitation to buy securities.",backTop:"BACK TO TOP ↑"
+},
+zh:{
+announce:"面向下一代计算产业的能源基础设施",navPlatform:"业务平台",navSolutions:"解决方案",navApproach:"开发路径",navAbout:"关于我们",navContact:"联系我们",heroEyebrow:"为 AI 时代提供能源动力",heroTitle:"驱动未来，<br><em>从更优质的能源开始。</em>",heroCopy:"Gridcrest 致力于开发面向人工智能与高性能计算的新一代电力基础设施，整合专属可再生能源发电、储能系统与高可靠性供电解决方案。",explore:"探索业务平台",talk:"联系业务团队",heroNote:"能源 • 算力 • 无限可能",artLabel1:"可再生能源发电",artLabel2:"面向算力的电力系统",scroll:"向下探索",introKicker:"公司简介",introTitle:"构建面向<em>未来的能源基础。</em>",introCopy:"随着 AI 算力需求快速增长，稳定、可扩展的电力供应正成为基础设施发展的关键挑战。Gridcrest 聚焦能源资产开发与综合解决方案，围绕数字经济未来的能源需求进行布局。",learn:"了解我们的开发路径",stat1:"将全天候供电能力作为设计重点",stat2:"可扩展的基础设施开发",stat3:"面向算力需求的能源策略",statNote:"以项目开发为核心，连接能源资源与不断增长的电力需求。",platformKicker:"GRIDCREST 业务平台",platformTitle:"一体化平台，<br><em>构建多元能源路径。</em>",platformCopy:"我们以协同开发的方式整合能源价值链关键环节，覆盖能源发电、储能、电力交付及长期运营。",cap1:"专属光伏发电",cap1p:"开发公用事业级光伏资源，为高能耗基础设施提供能源支持。",cap2:"储能系统",cap2p:"通过灵活的储能架构，平衡能源发电、用电需求与供电可靠性。",cap3:"算力配套基础设施",cap3p:"围绕数据中心及 AI 工作负载的运行要求开展电力系统规划。",cap4:"多能互补系统",cap4p:"结合光伏、储能、电网及备用电源，形成适配项目条件的能源方案。",cap5:"电力采购与交易",cap5p:"构建商业合作机制，并在适用情况下采用长期购电协议等安排。",cap6:"项目开发管理",cap6p:"统筹场址策略、合作伙伴、许可审批、项目交付与运营。",solutionsKicker:"能源与算力的交汇点",solutionsTitle:"围绕<em>真实需求</em>建设基础设施。",solutionsCopy:"从能源生产到数字基础设施，Gridcrest 关注让项目具备可行性与韧性的关键连接环节。",solutionTag1:"能源供应",solution1:"公用事业级可再生能源",solution1p:"以光伏为核心开发发电资产，重点关注资源条件、项目基本面与长期价值。",solutionTag2:"数字基础设施",solution2:"AI 与数据中心供电",solution2p:"通过系统化能源与基础设施规划，支持高密度计算场景的电力需求。",solutionTag3:"系统灵活性",solution3:"储能与多能互补系统",solution3p:"整合互补能源资源，提升系统灵活性，满足不同项目的具体需求。",approachKicker:"从规划走向运营",approachTitle:"以严谨开发路径，<br>推动<em>项目落地。</em>",approachCopy:"可靠的基础设施始于严谨的项目开发。我们聚焦推动项目从概念走向执行的关键工作环节。",step1:"场址与资源评估",step1p:"评估土地、光伏与风能资源、基础设施接入条件及当地环境。",step2:"技术与商业方案设计",step2p:"规划能源结构、储能配置、负荷曲线及商业合作模式。",step3:"许可审批与合作伙伴",step3p:"协调当地相关方、技术合作伙伴、行政审批及项目协议。",step4:"项目交付与长期运营",step4p:"与具备资质的合作伙伴推进项目执行、调试及运营策略。",approachFoot:"每个项目均需根据自身技术、监管、商业及环境条件独立评估。",principlesKicker:"我们的原则",principlesTitle:"以透明为基础，<br><em>以长期价值为导向。</em>",principle1:"基础设施优先",principle1p:"从电力系统、项目场址及终端用户需求的实际情况出发作出决策。",principle2:"合作驱动",principle2p:"在项目全生命周期内，与经验丰富的本地及国际合作伙伴协同推进。",principle3:"长期主义",principle3p:"重视项目基本面、负责任的开发方式与长期运营韧性。",contactKicker:"携手建设未来",contactTitle:"为下一种<em>可能</em><br>注入动力。",contactCopy:"如果您有项目、合作或投资相关咨询，欢迎联系 Gridcrest 团队。",contactButton:"开启商务沟通",emailLabel:"商务咨询",companyLabel:"公司名称",locationLabel:"业务方向",locationValue:"能源 • AI • 基础设施",footerLine:"面向 AI 时代的电力基础设施。",rights:"版权所有。",disclaimer:"本网站信息仅供一般参考，不构成证券出售要约或购买证券的招揽。",backTop:"返回顶部 ↑"
+}};
+let lang="en";
+const langButton=document.getElementById("langSwitch");
+function setLanguage(next){lang=next;document.documentElement.lang=lang==="zh"?"zh-CN":"en";document.querySelectorAll("[data-i18n]").forEach(el=>{const key=el.dataset.i18n;if(copy[lang][key])el.innerHTML=copy[lang][key]});langButton.textContent=lang==="en"?"中文":"EN";langButton.setAttribute("aria-label",lang==="en"?"Switch to Chinese":"切换到英文");}
+langButton.addEventListener("click",()=>setLanguage(lang==="en"?"zh":"en"));
+document.getElementById("year").textContent=new Date().getFullYear();
+const toggle=document.querySelector(".menu-toggle"),nav=document.querySelector(".nav");
+toggle.addEventListener("click",()=>{const open=nav.classList.toggle("open");toggle.setAttribute("aria-expanded",String(open));});
+nav.querySelectorAll("a").forEach(a=>a.addEventListener("click",()=>{nav.classList.remove("open");toggle.setAttribute("aria-expanded","false")}));
+const reveal=new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting){e.target.classList.add("visible");reveal.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll(".cap-card,.solution-card,.step,.stat,.principle-list>div").forEach(el=>{el.classList.add("reveal");reveal.observe(el)});
